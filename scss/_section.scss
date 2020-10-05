@@ -1,0 +1,17 @@
+.section {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.section-light {
+  background-color: $secondary-color;
+  color: $primary-color;
+  p {
+    color: $dark-color;
+  }
+}
+
+.section-dark {
+  background-color: $primary-color;
+  color: $secondary-color;
+}

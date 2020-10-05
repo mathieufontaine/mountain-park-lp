@@ -1,0 +1,112 @@
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  // background: $primary-color;
+  color: $primary-color;
+  border-radius: 5px;
+  border: solid #fff 1px;
+  margin-top: 25px;
+  transition: all 0.5s linear;
+  background: linear-gradient(
+    to right,
+    $primary-color 50%,
+    $secondary-color 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  background-position: left bottom;
+  color: $secondary-color;
+  font-weight: 400;
+}
+
+.scroll-btn {
+  position: relative;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: scrollDown 1.5s infinite;
+    animation: scrollDown 1.5s infinite;
+    box-sizing: border-box;
+  }
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+#top-btn {
+  display: inline-block;
+  background-color: $secondary-color;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  &:after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: $primary-color;
+    transition: all 0.6;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-color;
+    &:after {
+      color: $secondary-color;
+    }
+  }
+  &:active {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
