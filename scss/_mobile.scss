@@ -24,6 +24,9 @@
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
   h2 {
     font-size: 1.5rem;
     margin: 5px;
@@ -45,13 +48,49 @@
     top: 35%;
   }
 
-  .menu-wrap .menu .nav-tab {
-    font-size: 1.5rem;
-    padding: 1rem;
-
-    &:before {
-      content: "";
-      top: 0;
+  .menu-wrap {
+    .hamburger {
+      width: 70px;
+      height: 60px;
+      > div::before {
+        top: -12px;
+      }
+      > div::after {
+        top: 12px;
+      }
     }
+    .menu .nav-tab {
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      &:before {
+        content: "";
+        top: 0;
+      }
+    }
+  }
+  #contact {
+    // height: auto;
+    form {
+      width: 88%;
+      padding-left: 3%;
+      padding-right: 3%;
+      h1 {
+        font-size: 2rem;
+      }
+      textarea {
+        height: 150px;
+      }
+    }
+  }
+  footer {
+    padding: 10px;
+    p {
+      font-size: small;
+    }
+  }
+
+  #top-btn {
+    display: none;
   }
 }
