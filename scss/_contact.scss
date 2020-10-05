@@ -7,7 +7,7 @@ form {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
   margin: auto;
-  h1,
+  h2,
   p {
     text-align: center;
     margin-top: 5px;
@@ -71,11 +71,13 @@ textarea {
 
 @media only screen and (max-width: 800px) {
   form {
-    left: 3%;
     margin-right: 3%;
     width: 88%;
     margin-left: 3%;
     padding-left: 3%;
     padding-right: 3%;
+    h1 {
+      font-size: 2rem;
+    }
   }
 }
